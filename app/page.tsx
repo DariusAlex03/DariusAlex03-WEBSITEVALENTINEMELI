@@ -1,4 +1,5 @@
-import { supabase } from '@/lib/superbase' 
+import { supabase } from '@/lib/superbase'
+import Link from 'next/link'
 
 type ImportantDate = {
   id: number        
@@ -32,16 +33,24 @@ export default async function TempsPage() {
         <img src="/happyVD.svg" alt="logo" className="w-full h-full object-cover rounded-lg" />
       </div>
 
-      <div className="flex flex-col gap-4 mt-8">
-        <button className="px-25 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
-          Datele importante
-        </button>
-        <button className="px-25 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">
-          Iubirea ta zilnica
-        </button>
-        <button className="px-25 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
-          Galerie de poze
-        </button>
+      <div className="flex flex-col gap-4 mt-8 w-full max-w-md">
+        <Link href="/important-dates">
+          <div className="w-full px-6 py-4 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition text-center">
+            Datele importante
+          </div>
+        </Link>
+
+        <Link href="/daily-love">
+          <div className="w-full px-6 py-4 bg-pink-400 text-white rounded-lg hover:bg-pink-500 transition text-center">
+            Iubirea ta zilnica
+          </div>
+        </Link>
+
+        <Link href="/gallery">
+          <div className="w-full px-6 py-4 bg-pink-300 text-white rounded-lg hover:bg-pink-400 transition text-center">
+            Galerie de poze
+          </div>
+        </Link>
       </div>
     </main>
   )
