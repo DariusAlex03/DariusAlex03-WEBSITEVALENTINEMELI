@@ -1,6 +1,8 @@
 import { supabase } from '@/lib/superbase'
 import QuestionSection from '@/app/components/QuestionSection'
 import ImportantDatesSection from '@/app/components/ImportantDatesSection'
+import SweetMessagesSection from '@/app/components/SweetMessagesSection'
+import FutureMessagesSection from '@/app/components/FutureMessagesSection'
 
 type ImportantDate = {
   id: number        
@@ -9,11 +11,23 @@ type ImportantDate = {
   clasa: string
 }
 
+type FutureMessage = {
+  id: number
+  title: string
+  content: string
+  unlock_at: string
+}
+
 export default async function TempsPage() {
   const { data, error } = await supabase
     .from('important_dates')
     .select<'*', ImportantDate>()
     .order('date', { ascending: true })
+
+  const { data: futureMessagesData, error: futureMessagesError } = await supabase
+    .from('future_messages')
+    .select<'*', FutureMessage>()
+    .order('unlock_at', { ascending: true })
 
   if (error) {
     return (
@@ -34,6 +48,10 @@ export default async function TempsPage() {
       </section>
 
       <ImportantDatesSection dates={data || []} />
+
+      <SweetMessagesSection />
+
+      <FutureMessagesSection messages={futureMessagesData || []} />
     </main>
   )
 }

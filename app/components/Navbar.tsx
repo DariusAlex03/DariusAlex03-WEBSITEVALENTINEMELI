@@ -44,10 +44,16 @@ export default function Navbar() {
 
           <div className="hidden md:flex md:items-center md:space-x-4">
             <a href="#hero" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/20">
-              Intrebarea rosie
+              Intrebarea Rosie
             </a>
             <a href="#important-dates" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/20">
-              Datele importante
+              Datele Importante
+            </a>
+            <a href="#sweet-messages" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/20">
+              Mesaje Dulci
+            </a>
+            <a href="#future-messages" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-white/20">
+              Mesaje Speciale
             </a>
             {session && (
               <button onClick={handleSignOut} className="px-3 py-2 rounded-md text-sm font-medium bg-red-500 text-white hover:bg-red-600">
@@ -80,6 +86,12 @@ export default function Navbar() {
             </a>
             <a href="#important-dates" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">
               Datele importante
+            </a>
+            <a href="#sweet-messages" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">
+              Mesaje Dulci
+            </a>
+            <a href="#future-messages" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">
+              Pentru Viitor
             </a>
             {session && (
               <button onClick={handleSignOut} className="block text-left px-3 py-2 rounded-md text-base font-medium bg-red-500 text-white hover:bg-red-600">
