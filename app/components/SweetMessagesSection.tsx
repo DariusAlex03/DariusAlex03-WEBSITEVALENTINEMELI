@@ -28,7 +28,7 @@ const sweetMessages = [
   "Te ador, azi, mâine și pentru totdeauna 💕",
   "Ești visul din care nu vreau niciodată să mă trezesc 😴",
   "Tu ești rețeta fericirii mele 🧁",
-  "Sunt fericit că ți-am găsit pe tine 😊",
+  "Sunt fericit că te-am găsit pe tine 😊",
   "Ești frumoasă chiar și cu părul pe față 😄",
   "Ești infinitul meu ∞",
   "Ești cea cu care vreau să trăiesc tot ce este frumos 🌺",

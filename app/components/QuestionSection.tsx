@@ -29,7 +29,7 @@ export default function QuestionSection() {
   return (
     <div className="flex flex-col items-center gap-6 mt-8 w-full max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl text-center">
       <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white drop-shadow-lg">
-        Ai vrea să fii Valentina mea?
+        Would you like to be my Valentine?
       </h1>
 
       <div className="flex gap-4 mt-4">
@@ -42,7 +42,7 @@ export default function QuestionSection() {
             transition: "transform 0.3s ease",
           }}
         >
-          Da
+          YES
         </button>
 
         {noCount < 5 && (
@@ -51,7 +51,7 @@ export default function QuestionSection() {
             onClick={handleNoClick}
             className="px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
           >
-            Nu
+            NO
           </button>
         )}
       </div>
